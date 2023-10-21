@@ -2,8 +2,14 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\Hello;
 
-$hello = new Hello();
+use CowSay\Cow;
 
-echo $hello->talk();
+$bessie = new Cow('Hello, Farm!');
+
+// store the output in a variable
+$output = $bessie->say();
+echo $output;
+
+// or just echo the object for direct output
+echo $bessie;
